@@ -1,0 +1,204 @@
+body {
+    font-family: sans-serif;
+    background-color:#ffd859;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*.container2 {*/
+/*    display: none;  Säkerställ att container2 är synlig */
+/*    max-width: 500px;*/
+/*    margin-top: 20px;*/
+/*    margin: 20px auto;*/
+/*    padding: 20px;*/
+/*    background-color: #e9ecef;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+.container2 {
+    display: none; /* Använd Flexbox för layout */
+    max-width: 500px;
+    margin: 20px auto;
+    justify-content: space-between; /* Dela utrymmet mellan kolumnerna */
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    flex: 1; /* Gör vänster kolumn flexibel */
+    margin-right: 20px; /* Lägg till mellanrum mellan kolumnerna */
+}
+
+.right-column {
+    flex: 1; /* Gör höger kolumn flexibel */
+}
+
+
+h1 {
+    font-size: 48px;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+    text-shadow:
+    1px 1px 0 #fff, /* Översta vänstra skuggan */
+    -1px -1px 0 #fff, /* Nedersta högra skuggan */
+    1px -1px 0 #fff, /* Översta högra skuggan */
+    -1px 1px 0 #fff; /* Nedersta vänstra skuggan */
+}
+h2 {
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    text-align: center;
+    text-shadow:
+    1px 1px 0 #fff, /* Översta vänstra skuggan */
+    -1px -1px 0 #fff, /* Nedersta högra skuggan */
+    1px -1px 0 #fff, /* Översta högra skuggan */
+    -1px 1px 0 #fff; /* Nedersta vänstra skuggan */
+}
+
+h3 {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.heading {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.highlight {
+    color: #ff69b4; /* Rosa färg */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.exercise-list {
+    color: #ff69b4; /* Rosa färg för listan med övningar */
+    list-style-type: none; /* Ta bort punkterna */
+    padding: 0; /* Ta bort eventuell inre padding */
+    margin: 0; /* Ta bort eventuell yttre marginal */
+}
+
+.exercise-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px 0; /* Lägg till padding för att ge lite utrymme runt texten och knappen */
+}
+
+.exercise-text {
+    flex: 1; /* Gör att texten tar upp all tillgänglig plats */
+    margin-left: 5px;
+}
+
+.exercise-button {
+    background: none; /* Ta bort bakgrundsfärg */
+    border: none; /* Ta bort kanter */
+    color: #ea5ea4; /* Rosa färg för emojin */
+    font-size: 16px; /* Ställ in storlek för emojin */
+    cursor: pointer; /* Pekare vid hovring */
+    padding: 0; /* Ingen padding */
+    margin-left: 10px; /* Mellanrum till vänster om knappen */
+    width: auto; /* Anpassa bredden efter innehåll */
+    height: auto; /* Anpassa höjden efter innehåll */
+    min-width: 30px; /* Minsta bredd */
+    min-height: 30px; /* Minsta höjd */
+}
+
+.exercise-button:hover {
+    color: #800f37; /* Mörkare rosa vid hovring */
+}
+
+.submit-button {
+    background-color: #007bff; /* Bakgrundsfärg */
+    border: none; /* Ingen kantlinje */
+    color: white; /* Textfärg */
+    font-size: 16px; /* Textstorlek */
+    padding: 10px 20px; /* Padding */
+    border-radius: 5px; /* Rundade hörn */
+    cursor: pointer; /* Pekare vid hovring */
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Mörkare blå vid hovring */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.form-group > div {
+    flex: 1;
+}
+
+.form-group > div:nth-child(2) {
+    flex: 2;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input {
+    flex: 1;
+}
+
+select {
+    flex: 2;
+}
+
+
+
+#workoutOutput {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
